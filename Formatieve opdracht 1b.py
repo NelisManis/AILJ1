@@ -8,6 +8,8 @@ class GUI:
     def __init__(self, parent):
         """"Start het menu op"""
         try:
+            # met background1 en background2 is het niet duidelijk wat je er mee bedoelt, 
+            # probeer een naam te verzinnen waardoor iemand zonder naar de rest van de code te kijken gelijk weet wat je er mee bedoelt.
             self.background1
         except:
             self.background1='#0186ff'
@@ -16,6 +18,10 @@ class GUI:
         except:
             self.background2 = '#00ffaa'
         self.parent = parent
+        # Dit hoort niet echt bij de review maar wou het toch even zeggen;
+        # Het is best practise om je variabel namen (en functies) in het Engels te schrijven. Alles qua programmeren is in het Engels dus dat leest ook makkelijker.
+        # Zoals hieronder is alles in het Engels behalve jouw variabel naam: scherm, dit leest niet gemakkelijk. Maar dat is persoonlijke voorkeur
+        # Ook als je hulpt vraagt online zullen andere mensen niet begrijpen wat deze variabel namen inhouden.
         self.scherm = Frame(self.parent)
         self.scherm.config(bg=self.background1)
         self.scherm.pack(fill='both', expand=True)
@@ -40,7 +46,8 @@ class GUI:
         exitknop.pack(padx=20)
 
 
-    def setupraden(self):
+    # Gebruik camelcasing (of snakecasing) om een functienaam wat meer leesbaar te maken
+    def setupRaden(self):
         """Maakt een spelscherm aan voor versie van raden en roept de class mastermind op als er geraden wordt. (12X)"""
         self.raadkans = 1
 
@@ -138,6 +145,7 @@ class mastermind:
         kleurlist = ['White', 'Silver', 'Blue', 'Green', 'Yellow', 'Orange', 'Red', 'Pink']
         self.raadkleuren = []
 
+        # Hier is het verstandig om commentaar te plaatsen, anders is het niet direct duidelijk wat hier gebeurt
         for value in range(0, 4):
             kleur = kleurlist[random.randint(0, 7)]
             if kleur in self.raadkleuren:
@@ -152,6 +160,7 @@ class mastermind:
     def klikraden(self):
         """Houd bij hoevaak er is geraden en stopt het spel als er te vaak geraden wordt. (meer dan 12 keer)"""
         self.raadkans += 1
+        # Het is hier beter om (self.raadkans > 12) te gebruiken aangezien de groter dan (>) nooit gebruikt wordt omdat als de raadkans 13 is het spel beëindigd
         if self.raadkans >= 13:
             self.parent.destroy()
         else:
@@ -198,6 +207,7 @@ class mastermind:
                 raad = Label(raadvak, text=kleuren[x], bg=self.background2, fg=kleuren[x], font=('ariel', 11), width=10)
                 raad.place(x=xvalue1, y=10)
 
+            # Ook in deze loop is het handig om commentaar te gebruiken, ook voor jezelf als je terug wilt kijken wat alles ook alweer doet
             for value in range(0, len(kleuren)):
                 if self.raadkleuren.count(kleuren[value]) > 0:
                     if kleuren[value] == self.raadkleuren[value]:
