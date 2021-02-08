@@ -336,14 +336,6 @@ class mastermind:
 
         terugbutton = Button(self.mainspelscherm, text='Terug', command=lambda: [GUI.menu(self), self.mainspelscherm.destroy(), self.eindescherm.destroy()], bg='#202125', fg='White', font=('arial', 15), width=7, borderwidth=0)
         terugbutton.place(x=200, y=700)
-
-        with open('MastermindGames', 'r+') as mastermindjson:
-            data = json.load(mastermindjson)
-            data.update({'kleurcode': 'Yellow, Pink, Blue, Silver',
-                        'Kans 1': 'Blue, Blue, Blue, Pink',
-                        'Aantal kansen': 1})
-            
-
         return
 
 
