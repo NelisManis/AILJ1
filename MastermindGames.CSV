@@ -1,0 +1,23 @@
+eerste gok,tweede gok,antwoord,geraden,gok kansen
+
+"['White', 'White', 'White', 'White']","['Silver', 'Silver', 'Silver', 'Silver']","['Yellow', 'Pink', 'Blue', 'Silver']",True,6
+[],[],"['Green', 'Yellow', 'Yellow', 'Silver']",True,0
+[],[],"['Red', 'White', 'Yellow', 'Silver']",False,0
+"['White', 'White', 'White', 'White']",[],"['Pink', 'Red', 'Blue', 'Pink']",False,1
+"['Blue', 'Yellow', 'Green', 'Pink']",[],"['Silver', 'Yellow', 'Yellow', 'White']",False,1
+"['Yellow', 'Orange', 'Orange', 'Green']","['Silver', 'Yellow', 'Orange', 'White']","['Silver', 'Green', 'Green', 'Orange']",False,3
+"['Silver', 'Blue', 'White', 'Green']","['Yellow', 'Orange', 'Red', 'Pink']","['Silver', 'Pink', 'Red', 'Green']",False,2
+"['White', 'White', 'White', 'White']","['Silver', 'Silver', 'Silver', 'Silver']","['Pink', 'Silver', 'Pink', 'Blue']",True,8
+"['White', 'White', 'White', 'White']",[],"['Silver', 'Green', 'White', 'Silver']",False,1
+"['Pink', 'Pink', 'Pink', 'Pink']","['White', 'Blue', 'Yellow', 'White']","['White', 'Blue', 'Orange', 'Green']",False,2
+"['0', '0', '0', '0']",[],"['White', 'Blue', 'Blue', 'White']",False,1
+"['0', '0', '0', '0']","['White', 'Silver', 'White', 'Green']","['Yellow', 'Yellow', 'Pink', 'White']",False,5
+[],[],"['Orange', 'Silver', 'Orange', 'Silver']",False,0
+[],[],"['Orange', 'Green', 'Orange', 'White']",False,0
+[],[],"['Green', 'Yellow', 'Orange', 'Yellow']",False,0
+[],[],"['Orange', 'Blue', 'Orange', 'Pink']",False,0
+[],[],"['Blue', 'Silver', 'Red', 'Green']",False,0
+[],[],"['Green', 'White', 'Red', 'Orange']",False,0
+[],[],"['Blue', 'Pink', 'Orange', 'Green']",False,0
+[],[],"['Yellow', 'Silver', 'Orange', 'Blue']",False,0
+[],[],"['Red', 'Green', 'Pink', 'White']",False,0
