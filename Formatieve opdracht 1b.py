@@ -503,7 +503,7 @@ class mastermindzetten:
         mastermindzetten.kiezen(self)
 
     def klikkiezen(self):
-        if self.raadkans == 1:
+        if self.raadkans != 1:
             if self.kieslist1[-1] == '0' or self.kieslist3[-1] == '0' or self.kieslist2[-1] == '0' or self.kieslist4[-1] == '0':
                 self.infoscherm.config(text='Dit is geen gelidige code.\nVoer een geldige code in.')
                 return
@@ -614,7 +614,9 @@ class mastermindzetten:
             if self.kieslist1[-1] == '0' and value == True:
                 self.kieslist1.pop(-1)
                 self.zet1.config(text=self.kieslist1[0], fg=self.kieslist1[0])
-            if value == False:
+            elif value == True:
+                self.zet1.config(text=self.kieslist1[0], fg=self.kieslist1[0])
+            elif value == False:
                 self.controlebuttonlb.config(text=self.kieslist1[0])
             self.kieslist1.append(self.kieslist1[0])
             self.kieslist1.pop(0)
@@ -622,30 +624,30 @@ class mastermindzetten:
             if self.kieslist2[-1] == '0' and value == True:
                 self.kieslist2.pop(-1)
                 self.zet2.config(text=self.kieslist2[0], fg=self.kieslist2[0])
-            try:
+            elif value == True:
+                self.zet2.config(text=self.kieslist2[0], fg=self.kieslist2[0])
+            elif value == False:
                 self.controlebuttonrb.config(text=self.kieslist2[0])
-            except:
-                False
             self.kieslist2.append(self.kieslist2[0])
             self.kieslist2.pop(0)
         elif x == 3:
             if self.kieslist3[-1] == '0' and value == True:
                 self.kieslist3.pop(-1)
                 self.zet3.config(text=self.kieslist3[0], fg=self.kieslist3[0])
-            try:
+            elif value == True:
+                self.zet3.config(text=self.kieslist3[0], fg=self.kieslist3[0])
+            elif value == False:
                 self.controlebuttonlo.config(text=self.kieslist3[0])
-            except:
-                False
             self.kieslist3.append(self.kieslist3[0])
             self.kieslist3.pop(0)
         elif x == 4:
             if self.kieslist4[-1] == '0' and value == True:
                 self.kieslist4.pop(-1)
                 self.zet4.config(text=self.kieslist4[0], fg=self.kieslist4[0])
-            try:
+            elif value == True:
+                self.zet4.config(text=self.kieslist4[0], fg=self.kieslist4[0])
+            elif value == False:
                 self.controlebuttonro.config(text=self.kieslist4[0])
-            except:
-                False
             self.kieslist4.append(self.kieslist4[0])
             self.kieslist4.pop(0)
 
